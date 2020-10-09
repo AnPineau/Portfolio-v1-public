@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', serif;
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -- VARIABLES -- */
+
+$home-color: #463333;
+$about-color: #835858;
+$projects-color: #FFFBFB;
+$contact-color: $home-color;
+$footer-color: #312424;
+$text-color: #FFFFFF;
+$text-important-color: $home-color;
+
+/* -- MIXINS -- */
+
+@mixin btn-primary($behind-color: white) {
+    padding: 10px 25px 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    background-color: $behind-color;
+    background: linear-gradient(to left, $behind-color 50%, white 50%) right;
+    background-size: 201%;
+    letter-spacing: 0.5px;
+    transition: .3s ease-in-out;
+    &:hover {
+        background-position: left;
+        color: $behind-color;
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/* -- TITLE -- */
+
+.Title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    h2 {
+        font-weight: bold;
+        font-size: 40px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .line {
+        background-color: white;
+        width: 50px;
+        height: 4px;
+        border-radius: 14px;
+    }
+}
+
+/* -- HEADER -- */
+
+.Header {
+    position: fixed;
+    background-color: $home-color;
+    width: 100%;
+    padding-top: 4px;
+    padding-left: 100px;
+    ul {        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        height: 45px;
+        width: 400px;
+        li {
+            background-color: transparent;
+            .btn:focus, .btn__content:focus {
+                outline: none;
+            }
+            .btn:focus > .btn__content {
+                outline: 1px solid white;
+                outline-offset: 7px;
+                border-radius: 14px;
+            }
+            .btn {
+                background-color: transparent;
+                border: none;
+            }
+            .btn__content {
+                font-size: 16px;
+                text-transform: uppercase;
+                color: $text-color;
+                &:hover {   
+                    cursor: pointer;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    margin: auto;
+                    border-radius: 14px;
+                    height: 2px;
+                    width: 0px;
+                    background-color: transparent;
+                    margin-top: 3px;
+                    transition: width .4s ease, background-color .4s ease;
+                }
+                &:hover:after {
+                    width: 50%;
+                    background-color: white;
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+/* -- HOME -- */
+
+.Home {
+    height: 100vh;
+    background-color: $home-color;
+    color: $text-color;
+    p {
+        padding: 100px 0 0 100px;
+    }
+}
+
+/* -- ABOUT -- */
+
+.About {
+    height: 950px;
+    background-color: $about-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-color;
+    .Title {
+        margin-top: 134px;
+        margin-bottom: 80px;
+    }
+    .description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+    .resume {
+        @include btn-primary($about-color);
+        margin-left: 50px;
+    }
+    .skills {
+        .title {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 92px;
+            margin-bottom: 92px;
+        }
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-gap: 50px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    img {
+        max-width: 200px;
+        max-height: 100px;
+        object-fit: contain;
+        margin: auto;
+    }
+}
+
+/* -- PROJECTS -- */
+
+.Projects {
+    height: 1546px;
+    background-color: $projects-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .Title {
+        margin: 100px 0 100px 0;
+        h2 {
+            color: black;
+        }
+        .line {
+            background-color: black;
+        }
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        grid-gap: 150px;
+        .thumbnail {
+            background-color: grey;
+            height: 270px;
+        }
+        &-item {
+            .grid__title {
+                font-size: 26px;
+                font-weight: bold;
+                color: $home-color;
+                margin-bottom: 50px;
+            }
+            .grid__description {
+                font-size: 18px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+/* -- CONTACT -- */
+
+.Contact {
+    height: 950px;
+    background-color: $contact-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .Title {
+        margin: 100px 0 100px 0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .name, .email, .message {
+            background-color: #312424;
+            border: none;
+            border-radius: 3px;
+            width: 600px;
+            margin: 7px;
+            // Input content
+            color: white;
+            padding-left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .name, .email {
+            height: 46px;
+        }
+        .message {
+            height: 282px;
+            padding-top: 16px;
+        }
+        .submit {
+            @include btn-primary($contact-color);
+            margin-top: 76px;
+        }
+        .name::placeholder, .email::placeholder, .message::placeholder {
+            color: #919090;
+        }
+    }
+}
+
+/* -- FOOTER -- */
+
+.Footer {
+    height: 140px;
+    background-color: $footer-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 500px;
+        margin: 20px 30px 20px 30px;
+        .link-container {
+            display: flex;
+            h4 {
+                margin-left: 20px;
+                font-weight: normal;
+            }
+        }
+    }
+    .socials {
+        width: 100px;        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .icon {
+            font-size: 20px;
+        }  
+    }
+}
+.copyright {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 40%;
+}
