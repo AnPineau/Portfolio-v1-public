@@ -28,14 +28,14 @@ const About = React.forwardRef((props, ref) =>  {
             <div className="skills">
                 <h3 className="title" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="500">Main skills</h3>
                 <div className="grid" >
-                    <div className="grid-item"><img src={logo_Vue} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="VueJS"/></div>
-                    <div className="grid-item"><img src={logo_Html} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="HtmlCss"/></div>
-                    <div className="grid-item"><img src={logo_Node} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="NodeJS"/></div>
-                    <div className="grid-item"><img src={logo_AWS} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="AWS"/></div>
-                    <div className="grid-item"><img src={logo_React} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="ReactJS"/></div>
-                    <div className="grid-item"><img src={logo_Figma} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="Figma"/></div>
-                    <div className="grid-item"><img src={logo_MongoDB} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="MongoDB"/></div>
-                    <div className="grid-item"><img src={logo_Git} data-sal="flip-up" data-sal-duration="1000" data-sal-delay="1000" alt="Git"/></div>
+                    <div className="grid-item"><img src={logo_Vue} data-sal="flip-up" data-sal-duration="1000" alt="VueJS"/></div>
+                    <div className="grid-item"><img src={logo_Html} data-sal="flip-up" data-sal-duration="1000" alt="HtmlCss"/></div>
+                    <div className="grid-item"><img src={logo_Node} data-sal="flip-up" data-sal-duration="1000" alt="NodeJS"/></div>
+                    <div className="grid-item"><img src={logo_AWS} data-sal="flip-up" data-sal-duration="1000" alt="AWS"/></div>
+                    <div className="grid-item"><img src={logo_React} data-sal="flip-up" data-sal-duration="1000" alt="ReactJS"/></div>
+                    <div className="grid-item"><img src={logo_Figma} data-sal="flip-up" data-sal-duration="1000" alt="Figma"/></div>
+                    <div className="grid-item"><img src={logo_MongoDB} data-sal="flip-up" data-sal-duration="1000" alt="MongoDB"/></div>
+                    <div className="grid-item"><img src={logo_Git} data-sal="flip-up" data-sal-duration="1000" alt="Git"/></div>
                 </div>
             </div>
 

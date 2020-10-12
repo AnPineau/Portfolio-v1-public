@@ -1,0 +1,13 @@
+
+
+- Dessin landing page & screen/bulles (OR any cool looking landing page)
+- Fill correct content (projects, footer, other)
+- Set good accessibility on buttons (just like header)
+- Netflify lambda function to send email from contact form
+
+- Language support
+
+- Add google analytics with gatsby
+
+
+- Logos Background ???

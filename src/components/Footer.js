@@ -24,7 +24,7 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/antoine-pineau-280615132/" aria-label="linkedin antoine-pineau-280615132"><FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
         </div>
 
-        <h5 className="copyright">Antoine Pineau © 2020</h5>
+        <h5 className="copyright">© 2020 Antoine Pineau</h5>
 
     </div>
   )
