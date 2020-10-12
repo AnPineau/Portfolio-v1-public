@@ -13,8 +13,8 @@ export default React.forwardRef((props, ref) => {
                         <input name="bot-field" />
                     </label>
                 </div>
-                <input type="text" className="name" placeholder="Name"/>
-                <input type="text" className="email" placeholder="Email"/>
+                <input type="text" name="name" className="name" placeholder="Name"/>
+                <input type="text" name="email" className="email" placeholder="Email"/>
                 <textarea name="message" className="message" placeholder="Your message"></textarea>
                 <button className="submit" type="submit">Send</button>
             </form>
